@@ -1,5 +1,6 @@
 # LC27移除元素
-## 题目链接[Leetcode-移除元素](https://leetcode.cn/problems/remove-element/)
+## 题目链接
+[Leetcode-移除元素](https://leetcode.cn/problems/remove-element/)
 
 ## 题目描述
  - 给你一个数组`nums`和一个值`val`，你需要**原地移除**所有数值等于`val`的元素。元素的顺序可能发生改变。然后返回`nums`中与`val`不同的元素的数量。假设`nums`中不等于`val`的元素数量为`k`，要通过此题，您需要执行以下操作：
