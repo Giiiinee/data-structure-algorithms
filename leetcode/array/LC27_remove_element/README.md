@@ -1,23 +1,23 @@
-#LC27移除元素
-##题目链接[Leetcode-移除元素](https://leetcode.cn/problems/remove-element/)
+# LC27移除元素
+## 题目链接[Leetcode-移除元素](https://leetcode.cn/problems/remove-element/)
 
-##题目描述
+## 题目描述
  - 给你一个数组`nums`和一个值`val`，你需要**原地移除**所有数值等于`val`的元素。元素的顺序可能发生改变。然后返回`nums`中与`val`不同的元素的数量。假设`nums`中不等于`val`的元素数量为`k`，要通过此题，您需要执行以下操作：
  - 更改`nums`数组，使`nums`的前`k`个元素包含不等于`val`的元素。`nums`的其余元素和`nums`的大小并不重要。
  - 返回`k`。
 
-##示例
+## 示例
 输入：nums = [3,2,2,3], val = 3
 输出：[2,2,_,_]
 
-##解题思路
+## 解题思路
  - 运用**双索引法**，避免了额外空间的使用。（原地进行修改，没有额外使用新的数组）
  - 注意题目**要求返回K值**（即新数组长度）。
 
-##代码实现
-见'LC27_remove_element/solution.py'
+## 代码实现
+见`LC27_remove_element/solution.py`
 
-##小题总结
+## 小题总结
  - 学习双索引法。（一般适用于一下几种情况：
    1.原地修改数组或列表。(e.g.LC27)
    2.快速解决部分排序问题。(e.g.LC283)
