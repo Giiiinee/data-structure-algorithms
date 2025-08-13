@@ -1,10 +1,10 @@
 # LC209长度最小的子数组
 
 ## 题目链接
-[Leetcode](https://leetcode.cn/problems/minimum-size-subarray-sum/description/)
+[Leetcode-长度最小的子数组](https://leetcode.cn/problems/minimum-size-subarray-sum/description/)
 
 ## 题目描述
-给定一个含有`n`个正整数的数组和一个正整数`target`。找出该数组中满足其总和大于等于`target`的长度最小的**子数组**[numsl, numsl+1, ..., numsr-1, numsr] ，并返回其长度。如果不存在符合条件的子数组，返回`0`。
+给定一个含有`n`个正整数的数组和一个正整数`target`。找出该数组中满足其总和大于等于`target`的长度最小的**子数组**[nums<sub>l</sub>, nums<sub>l+1</sub>, ..., nums<sub>r-1</sub>, nums<sub>r</sub>] ，并返回其长度。如果不存在符合条件的子数组，返回`0`。
 
 ## 示例
 输入：target = 7, nums = [2,3,1,2,4,3]
@@ -22,13 +22,13 @@
  - 复习双索引法，学会利用双索引法找到所需子数组。
  - 了解while和if的不同使用条件，while为循环，而if只是一次判断。
  - **学会用float('inf')初始化一个"最大值"，任何真实子数组长度都比它小，从而在做比较时被替换掉。
- -  - float:浮点数类型。用法:
-    -  - 把数字/字符串转成浮点数。(如:float(3),float("5").)(如果字符串内不是有效数字，比如"abc"，会报错。)
+    - float:浮点数类型。用法:
+       - 把数字/字符串转成浮点数。(如:float(3),float("5").)(如果字符串内不是有效数字，比如"abc"，会报错。)
        - 生成特殊浮点数。(**float('inf')#正无穷大**.**float('-inf')#负无穷大**.**float('nan')#NAN**(不是一个数，表示计算结果无效).)
        - 用作计算。(带小数点的数字参与各种运算。)
        - 控制小数点位数(e.g.:print(**f"{num:.2f})**)({}内可以直接放表达式，不仅仅是变量。)
        - f-string format round区别:
-       -  - f-string(语法糖):print(f"{x:.2f}")
+          - f-string(语法糖):print(f"{x:.2f}")
           - format:print("{:.2f}".format(x))
           - round:print(round(x,2))/nprint(x)#x为四舍五入的数，2是保留小数位数)
        - f-string用法:
