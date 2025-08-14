@@ -4,7 +4,7 @@
 [Leetcode](https://leetcode.cn/problems/spiral-matrix-ii/)
 
 ## 题目描述
-给你一个正整数`n`，生成一个包含`1`到`n <sup>2</sup> `所有元素，且元素按顺时针顺序螺旋排列的`n x n`正方形矩阵`matrix`。
+给你一个正整数`n`，生成一个包含`1`到` n <sup>2</sup> `所有元素，且元素按顺时针顺序螺旋排列的`n x n`正方形矩阵`matrix`。
 
 ## 示例
 输入：n = 1
@@ -15,7 +15,7 @@
  - nums=[[0]*n for _ in range(n)]的使用。
 
 ## 代码实现
-见'LC59_spiral_matrix_ii/solution.py'
+见`LC59_spiral_matrix_ii/solution.py`
 
 ## 知识总结
  - 赋值方向：python中**等号左边**是**存放位置**，**等号右边**是**要存放的内容**
