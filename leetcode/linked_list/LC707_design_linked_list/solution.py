@@ -3,32 +3,32 @@
 #法一(类方法之间的调用不要求严格顺序)
 class ListNode:
     def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
+        self.val = val   #给节点的值val提供一个默认值
+        self.next = next    #给节点的后继指针next提供默认值
 
 class MyLinkedList:
 
     def __init__(self):
         self.size = 0
-        self.head = ListNode(0)  # 虚拟头结点
+        self.head = ListNode(0)  #虚拟头结点
 
     def get(self, index):
         if index < 0 or index >= self.size:
             return -1
         curr = self.head
-        for _ in range(index + 1):  # 多走一步到真正节点
+        for _ in range(index + 1):  #多走一步到真正节点
             curr = curr.next
         return curr.val
 
     def addAtHead(self, val):
-        self.addAtIndex(0, val)
+        self.addAtIndex(0, val)    #调用之后的addAtIndex函数
 
     def addAtTail(self, val):
         self.addAtIndex(self.size, val)
 
     def addAtIndex(self, index,val):
         if index > self.size:
-            return
+            return      #当函数遇到无法继续执行合理逻辑的情况时，用空return快速终止函数，不返回具体内容
         if index < 0:
             index = 0
         self.size += 1
@@ -61,7 +61,7 @@ class MyLinkedList:
         self.size=0
         
     def get(self,index):
-        if index<0 or index>=self.size:
+        if index<0 or index>=self.size:    #长度为3的链表索引为0，1，2
             return -1
         curr=self.head
         for _ in range(index):
