@@ -1,6 +1,7 @@
 # LC707设计链表
 
-## 题目链接[LeetCode]`https://leetcode.cn/problems/design-linked-list/`
+## 题目链接
+见[LeetCode]`https://leetcode.cn/problems/design-linked-list/`
 
 ## 题目描述
 你可以选择使用单链表或者双链表，设计并实现自己的链表。
@@ -45,3 +46,4 @@
     - 通常同时维护"头指针"(dummyHead)和"尾指针"(dummyTail或直接用tail)，可直接定位链表两端；尾部节点的next为None，头部节点的prev为None。
     - 每个节点需存2个指针。
     - 需同时维护`next`和`prev`两个指针，插入/删除时需同步修改"前驱节点的`next`"和"后驱节点的`prev`"，代码逻辑更复杂。
+ - `pred`和`prev`都指"前驱节点"(即当前节点的前一个节点)，区别为`pred`是临时变量，仅在特定操作(如添加/删除节点)中作为“桥梁”使用;`prev`更多见于双向链表的节点定义中，作为节点的固定属性(如`self.prev`)，用于永久保存前驱节点的引用。
