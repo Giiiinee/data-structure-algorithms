@@ -1,6 +1,6 @@
 #LC707设计链表
 
-#法一(类方法之间的调用不要求严格顺序)
+#法一单链表做法(类方法之间的调用不要求严格顺序)
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val   #给节点的值val提供一个默认值
@@ -48,8 +48,69 @@ class MyLinkedList:
             pred = pred.next
         pred.next = pred.next.next
 
+#法一双链表做法
+class Node:
+    def __init__(self,val=0):
+        self.val=val
+        self.next=None
+        self.prev=None
 
-#法二
+class MyLinkedList:
+    def __init__(self):
+        self.dummy_head = Node(0)
+        self.dummy_tail = Node(0)
+        self.dummy_head.next = self.dummy_tail
+        self.dummy_tail.prev = self.dummy_head
+        self.size = 0
+    
+    def get(self, index):
+        if index < 0 or index >= self.size:
+            return -1
+        if index < self.size - index:
+            curr = self.dummy_head.next
+            for _ in range(index):
+                curr = curr.next
+        else:
+            curr = self.dummy_tail.prev
+            for _ in range(self.size -1 - index):
+                curr = curr.prev
+        return curr.val
+
+    def addAtIndex(self,index,val):
+        if index>self.size:
+            return
+        if index<0:
+            index=0
+        pred,succ=self.dummy_head,self.dummy_head.next
+        for _ in range(index):
+            pred=pred.next
+            succ=succ.next
+        to_add=Node(val)
+        to_add.prev=pred
+        to_add.next=succ
+        pred.next=to_add
+        succ.prev=to_add
+        self.size+=1
+
+    def deleteAtIndex(self,index):
+        if index<0 or index>=self.size: 
+            return
+        pred=self.dummy_head
+        for _ in range(index):
+            pred=pred.next
+        succ=pred.next
+        pred.next=succ.next
+        succ.next.prev=pred
+        self.size-=1
+
+    def addAtHead(self,val):
+        self.addAtIndex(0,val)
+
+    def addAtTail(self,val):
+        self.addAtIndex(self.size,val)
+
+
+#法二单链表做法
 class ListNode:
     def __init__(self,val=0,next=None):
         self.val=val
