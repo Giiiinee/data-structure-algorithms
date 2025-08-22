@@ -71,11 +71,11 @@
     - `self.dummy_tail.prev = self.dummy_head`:把“尾”指回“头”，完成**双向闭环**，后续插入节点时只需在`dummy_head`与`dummy_tail`之间“拆开”再“接上”即可。
     - `self.size = 0`:记录当前有效节点数，用来快速判断索引合法性、决定从头还是从尾遍历等。
  - 插入操作(在`pred`与`succ`之间插入新节点)：
-   new.prev = pred
-   new.next = succ
-   pred.next = new
-   succ.prev = new
+      new.prev = pred
+      new.next = succ
+      pred.next = new
+      succ.prev = new
  - 删除操作：
-   to_delete.prev.next = to_delete.next
-   to_delete.next.prev = to_delete.prev
-   to_delete.prev = to_delete.next = None
+      to_delete.prev.next = to_delete.next
+      to_delete.next.prev = to_delete.prev
+      to_delete.prev = to_delete.next = None
