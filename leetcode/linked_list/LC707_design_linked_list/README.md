@@ -74,8 +74,10 @@
       ```new.prev = pred
       new.next = succ
       pred.next = new
-      succ.prev = new```
+      succ.prev = new
+      ```
  - 删除操作：
       ```to_delete.prev.next = to_delete.next
       to_delete.next.prev = to_delete.prev
-      to_delete.prev = to_delete.next = None```
+      to_delete.prev = to_delete.next = None
+      ```
