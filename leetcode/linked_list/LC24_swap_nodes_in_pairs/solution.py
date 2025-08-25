@@ -1,11 +1,11 @@
 #两两交换链表中的节点
-class Listnode:
+class ListNode:
     def __init__(self,val=0,next=None):
         self.val=val
         self.next=next
 class Solution(object):
     def swapPairs(self, head):
-        dummy_head=Listnode()
+        dummy_head=ListNode()
         dummy_head.next=head
         cur=dummy_head
         while cur.next!=None and cur.next.next!=None:
