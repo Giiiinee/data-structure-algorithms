@@ -1,4 +1,5 @@
 #两个数组的交集
+##法一 使用字典和集合
 class Solution(object):
     def intersection(self, nums1, nums2):
         table = {}
@@ -10,3 +11,8 @@ class Solution(object):
                 res.add(num)
                 del table[num]
         return list(res)
+
+##法二 使用集合
+class Solution:
+    def intersection(self, nums1, nums2):
+        return list(set(nums1) & set(nums2))
