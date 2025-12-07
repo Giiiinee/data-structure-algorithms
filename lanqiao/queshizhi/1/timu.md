@@ -1,14 +1,16 @@
 ## 题目:
-①读取文件
-②计算缺失值
-③写txt
-④填补缺失后保存
+ - 读取文件
+ - 计算缺失值
+ - 写txt
+ - 填补缺失后保存
 
 路径地址
-['user_id,register_time"D:\文件\py\pythonProject1\蓝桥杯\缺失值\1\users.csv",recently_logged,school,number_of_classes_join,learn_time']
+[user_id,register_time"D:\文件\py\pythonProject1\蓝桥杯\缺失值\1\users.csv",recently_logged,school,number_of_classes_join,learn_time]
 
+```python
 1,2025/1/3 12:00,2025/1/10 08:00,清华大学,2,12
 2,2025/1/5 09:30,,北京大学,1,5
 3,2025/1/8 14:20,2025/1/20 19:00,浙江大学,3,22
 4,2025/1/15 07:10,,复旦大学,1,2
 5,2025/1/25 11:00,2025/2/01 09:00,南京大学,2,18
+```
