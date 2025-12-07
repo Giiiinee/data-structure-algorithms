@@ -4,7 +4,8 @@
 ③写txt
 ④填补缺失后保存
 
-路径地址'user_id,register_time"D:\文件\py\pythonProject1\蓝桥杯\缺失值\1\users.csv",recently_logged,school,number_of_classes_join,learn_time'
+路径地址
+['user_id,register_time"D:\文件\py\pythonProject1\蓝桥杯\缺失值\1\users.csv",recently_logged,school,number_of_classes_join,learn_time']
 
 1,2025/1/3 12:00,2025/1/10 08:00,清华大学,2,12
 2,2025/1/5 09:30,,北京大学,1,5
