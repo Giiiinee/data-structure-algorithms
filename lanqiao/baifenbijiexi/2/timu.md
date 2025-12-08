@@ -1,7 +1,7 @@
 ## 题目
  - 从`learn_process`中提取数字部分
  - 提取不到数字部分的行,视为无效行,统计无效行,写入`task0102_3.txt`
- - 删除无效行,转化为`int`+保存为`study_new.csv`(列必须含有`user_id`,`course_id`,learn_process`,`learn_pct`)
+ - 删除无效行,转化为`int`+保存为`study_new.csv`(列必须含有`user_id`,`course_id`,`learn_process`,`learn_pct`)
 
 文件路径
 ["D:\文件\py\pythonProject1\蓝桥杯\百分比解析\2\1.csv"]
