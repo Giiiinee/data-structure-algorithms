@@ -1,0 +1,15 @@
+import pandas as pd
+df = pd.read_csv("study_information.csv")
+def parse_pct(x):
+    try:
+        return float(x.replace("%", ""))
+    except:
+        return None
+df["learn_pct"] = df["learn_process"].apply(parse_pct)
+invalid_rows = df["learn_pct"].isna().sum()
+# 保存无效数量
+with open("task0102.txt", "w") as f:
+    f.write(str(invalid_rows))
+# 删除无效行
+df = df.dropna(subset=["learn_pct"])
+df.to_csv("study_information_new.csv", index=False)
